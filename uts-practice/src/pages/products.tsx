@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProductCardCart from "../components/product-card";
+import ProductCard from "../components/product-card";
 import { getProducts, type ProductList } from "../lib/api";
 
 export default function Products() {
@@ -33,7 +33,7 @@ export default function Products() {
                         <p>No products available.</p>
                     )}
                     {products && products.products.map((p) => (
-                        <ProductCardCart key={p.id} product={p} />
+                        <ProductCard key={p.id} product={p} />
                     ))}
                 </div>
             </div>
